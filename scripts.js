@@ -2,11 +2,25 @@
 var startButton = document.querySelector('#test-section button');
 var textarea = document.querySelector('#test-section textarea');
 var result = document.querySelector('#result');
+var typed = new Typed('.auto-type', {
+  strings: ["Racer",],
+  typeSpeed:150,
+  backSpeed:150,
+  cursorChar:'',
+  loop:true,
+  resetCursor: true
+});
 
 // Set the paragraph that the user needs to type
 var paragraph = "The hungry Stork was much displeased at the trick, but he was a calm, even-tempered fellow and saw no good in flying into a rage. Instead, not long afterward, he invited the Fox to dine with him in turn.";
 
 startButton.addEventListener('click', function() {
+  typed.strings = ['Racer'];
+  typed.typeSpeed=.0001;
+
+  typed.loop=false;
+
+  // typed.stop();
   // Start a timer to track the time taken for the test
   var startTime = Date.now();
 
@@ -76,9 +90,6 @@ startButton.addEventListener('click', function() {
         if (paragraphText[i] === textareaValue[i]) {
           highlightedParagraph += '<span class="correct">' + paragraphText[i] + '</span>';
         } else {
-          // If the character does not match, highlight it red
-          highlightedParagraph += '<span class="incorrect">'
-    // If the character does not match, highlight it red
     highlightedParagraph += '<span class="incorrect">' + paragraphText[i] + '</span>';
     }
     } else {

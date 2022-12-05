@@ -3,19 +3,26 @@
 <head>
   <title>Typing Speed Test</title>
   <link rel="stylesheet" href="styles.css">
-</head>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<!-- HTML -->
 <body>
-  <!-- Define the structure and layout of the website -->
-  <div id="header">
-    <h1>Typing Speed Test</h1>
-    <p>Test your typing speed and accuracy with our free online tool.</p>
+  <div id="parent-element">
+  <div class="card">
+    <div class="card-header">
+      <h1>Type <span class="auto-type"></span> <img src="Capture.PNG" alt=""></h1>
+    </div>
+    <div id="test-section">
+      <textarea placeholder="Type here to start the test"></textarea>
+      <button>Start Test</button>
+      <p id="result"></p>
+    </div>
+  
   </div>
-  <div id="test-section">
-    <textarea placeholder="Type here to start the test"></textarea>
-    <button>Start Test</button>
-    <p id="result"></p>
-  </div>
-
   <script src="scripts.js"></script>
+  
+  
+
 </body>
+
 </html>
