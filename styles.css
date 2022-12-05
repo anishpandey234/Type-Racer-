@@ -1,46 +1,64 @@
-/* Define the style and layout of the website */
-#header {
-    background-color: #333;
-    padding: 20px;
-    margin: 0;
-  }
-  #header h1 {
-    font-family: sans-serif;
-    color: #fff;
-    font-size: 24px;
-  }
-  #header p {
-    font-family: sans-serif;
-    color: #fff;
-  }
-  #test-section {
-    width: 500px;
-    padding: 20px;
-    margin: 0 auto;
-  }
-  #test-section textarea {
-    width: 100%;
-    height: 200px;
-    font-size: 16px;
-  }
-  #test-section button {
-    background-color: #333;
-    color: #fff;
-    font-family: sans-serif;
-    font-size: 16px;
-    padding: 10px 20px;
-    margin-top: 20px;
-  }
-  
-  .highlight {
-    background-color: #FFFF00;
-  }
-  
-  .correct {
-    background-color: #00FF00;
-  }
-  
-  .incorrect {
-    background-color: #FF0000;
-  }
-  
+/* Define the style and layout of the website using Material Design */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500|Nunito:400,700');
+
+body {
+  background: linear-gradient(to right, #333, #555);
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+  height: 100vh;
+}
+
+h1 {
+  font-family: 'Roboto Mono', monospace;
+  color: #2F3339;
+  font-size: 2em;
+}
+
+p {
+  font-family: 'Roboto Mono', monospace;
+  color: #6B7C93;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.form-control {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1em;
+  padding: 20px;
+  margin-top: 10px;
+  background-color: #555;
+  color: #fff;
+}
+
+.btn {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #007EE5;
+  color: #fff;
+  font-size: 1em;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #005CAB;
+}
+
+#result {
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+.highlight {
+  background-color: #FFFF00;
+}
+
+.correct {
+  background-color: #00FF00;
+}
+
+.incorrect {
+  background-color: #FF0000;
+}

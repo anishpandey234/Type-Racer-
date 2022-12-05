@@ -1,6 +1,7 @@
 // Add interactivity to the website using JavaScript
-var startButton = document.querySelector('#test-section button');
-var textarea = document.querySelector('#test-section textarea');
+
+var startButton = document.querySelector('.btn');
+var textarea = document.querySelector('.form-control');
 var result = document.querySelector('#result');
 
 // Set the paragraph that the user needs to type
@@ -15,12 +16,19 @@ startButton.addEventListener('click', function() {
   var paragraphElement = document.createElement('p');
   paragraphElement.innerHTML = paragraph;
   paragraphElement.classList.add('paragraph');
-  document.querySelector('#test-section').prepend(paragraphElement);
+  
+  // Add a container element to hold the paragraph and timer elements
+  var container = document.createElement('div');
+  container.classList.add('ds-textarea-container');
+  container.appendChild(paragraphElement);
 
   // Create a timer element
   var timer = document.createElement('p');
   timer.innerHTML = 'Time remaining: 60 seconds';
-  document.querySelector('#test-section').prepend(timer);
+  container.appendChild(timer);
+  
+  // Prepend the container element to the form group element
+  document.querySelector('.form-group').prepend(container);
 
   // Update the timer element every second
   setInterval(function() {
@@ -38,7 +46,7 @@ startButton.addEventListener('click', function() {
   textarea.addEventListener('input', function() {
     // Calculate the time remaining
     var timeRemaining = 60 - Math.round((Date.now() - startTime) / 1000);
-  
+
     // If the time remaining is less than or equal to 0, end the test
     if (timeRemaining <= 0) {
       return;
@@ -76,8 +84,6 @@ startButton.addEventListener('click', function() {
         if (paragraphText[i] === textareaValue[i]) {
           highlightedParagraph += '<span class="correct">' + paragraphText[i] + '</span>';
         } else {
-          // If the character does not match, highlight it red
-          highlightedParagraph += '<span class="incorrect">'
     // If the character does not match, highlight it red
     highlightedParagraph += '<span class="incorrect">' + paragraphText[i] + '</span>';
     }
@@ -89,3 +95,4 @@ startButton.addEventListener('click', function() {
     // Update the paragraph with the highlighted characters
     paragraphElement.innerHTML = highlightedParagraph;
     })});
+

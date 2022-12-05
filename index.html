@@ -2,17 +2,24 @@
 <html>
 <head>
   <title>Typing Speed Test</title>
+  <!-- Update the link to reference the new styles.css file -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Include Material Design's CSS file from the CDN -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <link rel="stylesheet" href="dark-theme.css">
+
 </head>
 <body>
-  <!-- Define the structure and layout of the website -->
-  <div id="header">
-    <h1>Typing Speed Test</h1>
-    <p>Test your typing speed and accuracy with our free online tool.</p>
-  </div>
-  <div id="test-section">
-    <textarea placeholder="Type here to start the test"></textarea>
-    <button>Start Test</button>
+  <!-- Define the structure and layout of the website using Material Design -->
+  <div class="container">
+    <h1 class="mb-4">Typing Speed Test</h1>
+    <p class="mb-4">Test your typing speed and accuracy with our free online tool.</p>
+    <div class="form-group">
+      <textarea placeholder="Type here to start the test" class="form-control"></textarea>
+    </div>
+    <button class="btn btn-primary">Start Test</button>
     <p id="result"></p>
   </div>
 
