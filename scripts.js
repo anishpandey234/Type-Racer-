@@ -12,15 +12,13 @@ var typed = new Typed('.auto-type', {
 });
 
 // Set the paragraph that the user needs to type
-var paragraph = "The hungry Stork was much displeased at the trick, but he was a calm, even-tempered fellow and saw no good in flying into a rage. Instead, not long afterward, he invited the Fox to dine with him in turn.";
+var paragraph = 'A Lion had been watching three Bullocks feeding in an open field. He had tried to attack them several times, but they had kept together, and helped each other to drive him off. The Lion had little hope of eating them, for he was no match for three strong Bullocks with their sharp horns and hoofs. But he could not keep away from that field, for it is hard to resist watching a good meal, even when there is little chance of getting it. Then one day the Bullocks had a quarrel, and when the hungry Lion came to look at them and lick his chops as he was accustomed to do, he found them in separate corners of the field, as far away from one another as they could get. It was now an easy matter for the Lion to attack them one at a time, and this he proceeded to do with the greatest satisfaction and relish.';
 
 startButton.addEventListener('click', function() {
   typed.strings = ['Racer'];
   typed.typeSpeed=.0001;
-
   typed.loop=false;
 
-  // typed.stop();
   // Start a timer to track the time taken for the test
   var startTime = Date.now();
 
