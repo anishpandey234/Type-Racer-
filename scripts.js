@@ -1,4 +1,4 @@
-// Add interactivity to the website using JavaScript
+
 var startButton = document.querySelector('#test-section button');
 var textarea = document.querySelector('#test-section textarea');
 var result = document.querySelector('#result');
@@ -11,7 +11,7 @@ var typed = new Typed('.auto-type', {
   resetCursor: true
 });
 
-// Set the paragraph that the user needs to type
+
 var paragraph = 'A Lion had been watching three Bullocks feeding in an open field. He had tried to attack them several times, but they had kept together, and helped each other to drive him off. The Lion had little hope of eating them, for he was no match for three strong Bullocks with their sharp horns and hoofs. But he could not keep away from that field, for it is hard to resist watching a good meal, even when there is little chance of getting it. Then one day the Bullocks had a quarrel, and when the hungry Lion came to look at them and lick his chops as he was accustomed to do, he found them in separate corners of the field, as far away from one another as they could get. It was now an easy matter for the Lion to attack them one at a time, and this he proceeded to do with the greatest satisfaction and relish.';
 
 startButton.addEventListener('click', function() {
